@@ -18,7 +18,7 @@ const server         = http.createServer((req,rep)=>{
   const headTypeHTML = {'Content-Type':'text/html'};
   if (req.method === 'GET' && req.url === '/') {
     const mainPage   = fs.readFileSync('./index.html','utf-8')
-    rep.writeHead(200, {'Content-type' : 'text/html'})
+    rep.writeHead(200, headTypeHTML)
     rep.end(mainPage)
   }
   
